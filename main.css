@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background-color: #b9dbef;
+    --text-color: #1d1d2a;
+    --font-stack: system-ui, -apple-system, sans-serif;
+    --layout-spacing: 10px;
+}
+html{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-stack);
+
+}    
+h1{
+    font-size: 2.00rem;
+    margin-bottom: var(--layout-spacing);
+}
+h2{
+    font-size: 1.75rem;
+}
+h3{
+    font-size: 1.50rem;
+}
+body{
+    max-width: 80%;
+    margin: auto;
+}
+
+nav{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        
+        a, a :visited{
+            text-decoration: none;
+            color: #000000;
+        }
+        a:hover{
+            font-size: 105%;
+            color:#4b5a4b
+        }
+        
+    }
+
+}
+
+input:focus{
+    background-color: #bcdfbc;
+}
+
+
+form, article{
+    margin: 10px;
+    padding: 25px;
+    border: 2px dashed black;
+    img{
+        width: 25%;
+        height: 25%;
+    }
+}
+
+div[data-theme="normal"]{
+    background-color: #ffffff;
+}
+/**This CSS is for the div with the attribute selector data-theme that is "normal**/
+
+main > iframe{
+    width: 500px;
+    height: 250px;
+    /*This CSS targets the map element in the home page, formatting the height and width*/
+}
+picture ~ ol li{
+    color: rgb(68, 0, 0);
+}
+
+/**This formatting targets the li elements of the ordered list that is a subsequent sibling of the picture tag**/
+
+@media screen and (max-width: 375px){
+    nav{
+        text-align: center;
+        ul{        
+            display: block;
+        }
+      
+    }
+}
